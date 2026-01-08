@@ -1,0 +1,51 @@
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+    width: 100vw;
+    background: conic-gradient(
+        #ff7e5f 0deg,     /* สีแรกเริ่มที่ 0 องศา */
+        #feb47b 90deg,    /* สีที่สองเริ่มที่ 90 องศา */
+        #ff7e5f 180deg,   /* สีแรกเริ่มที่ 180 องศา */
+        #feb47b 270deg,   /* สีที่สองเริ่มที่ 270 องศา */
+        #ff7e5f 360deg    /* สีแรกกลับมาที่ 360 องศา */
+    );
+    animation: rotateBackground 10s linear infinite; /* การหมุน background */
+}
+
+.container {
+    place-items: center;
+}
+
+.name {
+    color: aliceblue;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    white-space: nowrap;
+}
+
+@keyframes rotateBackground {
+    0% {
+        background: conic-gradient(
+            #ff7e5f 0deg, 
+            #feb47b 90deg,
+            #ff7e5f 180deg,
+            #feb47b 270deg,
+            #ff7e5f 360deg
+        );
+    }
+    100% {
+        background: conic-gradient(
+            #ff7e5f 360deg, 
+            #feb47b 450deg, 
+            #ff7e5f 540deg, 
+            #feb47b 630deg, 
+            #ff7e5f 720deg
+        );
+    }
+}
